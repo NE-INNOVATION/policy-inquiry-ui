@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  gatewayUrl : 'http://localhost:5000/api/PolicyInquiry/GetDetails/'
+  gatewayUrl : 'http://neion-gw-development.apps.openshift.ne-innovation.com/api/policyinquiry/getdetails/'
 };
 
 /*
