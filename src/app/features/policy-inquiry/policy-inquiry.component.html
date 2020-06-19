@@ -1,70 +1,113 @@
 <div class="container">
-    <form>
-        <div class="form-group row padding">
-            <div class="row col-6">
-                <div class="active-cyan-4 mb-4 col-6">
-                    <input class="form-control" type="text" #policyNumberInput placeholder="Policy Number" aria-label="Search" >
-                </div>
-                <div class="col-4">
-                    <button class="btn btn-outline-secondary" type="submit" (click)="onClickSearch(policyNumberInput.value)">Search</button>
-                </div>
+  <form>
+    <div class="form-group row padding">
+      <div class="row col-6">
+        <div class="active-cyan-4 mb-4 col-6">
+          <input class="form-control" type="text" #policyNumberInput placeholder="Policy Number" aria-label="Search">
+        </div>
+        <div class="col-4">
+          <button class="btn btn-outline-secondary" type="submit"
+            (click)="onClickSearch(policyNumberInput.value)">Search</button>
+        </div>
+      </div>
+    </div>
+    <div>
+      <ngb-accordion #acc="ngbAccordion">
+        <ngb-panel id="toggle-1" title="Basic Information">
+          <ng-template ngbPanelContent>
+            <div class="row">
+              <div class="col-12">
+                <label for="FirstName">First Name: {{ policyInquiryDetails?.Customer?.FirstName }}</label>
+              </div>
+              <div class="col-12">
+                <label for="LastName">Last Name: {{ policyInquiryDetails?.Customer?.LastName }}</label>
+              </div>
+              <div class="col-12">
+                <label for="StreetAddress">Street Address: {{ policyInquiryDetails?.Customer?.StreetAddress }}</label>
+              </div>
+              <div class="col-12">
+                <label for="Apt">Apt: {{ policyInquiryDetails?.Customer?.Apt }}</label>
+                <label for="Zip">Zip: {{ policyInquiryDetails?.Customer?.Zip }}</label>
+              </div>
             </div>
-        </div>
-        <div>
-            <ngb-accordion #acc="ngbAccordion">
-                <ngb-panel id="toggle-1" title="Basic Information">
-                  <ng-template ngbPanelContent>
-                     <div class="row">
-                       
-                     </div>
-                  </ng-template>
-                </ngb-panel>
-                <ngb-panel id="toggle-2" title="Coverages">
-                  <ng-template ngbPanelContent>
-                    <div class="row">
-                        <div class="col-12">
-                            Name : tokiu
-                        </div>
-                        <div class="col-12">
-                          Dob: 4/6/1989
-                       </div>
-                        <div class="col-12">
-                          Address : tokiu
-                        </div>
+          </ng-template>
+        </ngb-panel>
+        <ngb-panel id="toggle-2" title="Coverages">
+          <ng-template ngbPanelContent>
+            <div class="row">
+              <div class="col-12">
+                <label for="Bi" *ngIf="policyInquiryDetails?.Coverages?.Bi"></label>
+              </div>
+              <div class="col-12">
+                <label for="Pd" *ngIf="policyInquiryDetails?.Coverages?.Pd"></label>
+              </div>
+              <div class="col-12">
+                <label for="Med" *ngIf="policyInquiryDetails?.Coverages?.Med"></label>
+              </div>
+              <div class="col-12">
+                <label for="Comp" *ngIf="policyInquiryDetails?.Coverages?.Comp"></label>
+              </div>
+              <div class="col-12">
+                <label for="Col" *ngIf="policyInquiryDetails?.Coverages?.Col"></label>
+              </div>
+              <div class="col-12">
+                <label for="Premium">Premium: {{policyInquiryDetails?.Coverages?.Premium}}</label>
+              </div>
+            </div>
+          </ng-template>
+        </ngb-panel>
+        <ngb-panel id="toggle-3" title="Drivers">
+          <ng-template ngbPanelContent>
+            <div class="row">
+              <div class="col-4">
+                <div class="row">
+                  <div class="col" *ngFor="let driver of policyInquiryDetails?.Drivers; let isFirst = first">
+                    <div class="col-12"> 
+                      <label for="Apt">Name: {{ driver?.Name }}</label>
                     </div>
-                  </ng-template>
-                </ngb-panel>
-                <ngb-panel id="toggle-3" title="Drivers">
-                    <ng-template ngbPanelContent>
-                      <div class="row">
-                          <div class="col-4">
-                              <div class="row">
-                                <div class="col">
-                                    <div class="col-12"> Name : tokiu</div>
-                                    <div class="col-12"> Dob: 4/6/1989</div>
-                                    <div class="col-12"> Address : tokiu</div>
-                                 </div>
-                                 <div class="col">
-                                    <div class="col-12"> Name : tokiu</div>
-                                    <div class="col-12"> Dob: 4/6/1989</div>
-                                    <div class="col-12"> Address : tokiu</div>
-                                 </div>
-                                 </div>
-                              </div>
-                          </div>
-                     </ng-template>
-                  </ngb-panel>
-                  <ngb-panel id="toggle-4" title="Vehicles">
-                    <ng-template ngbPanelContent>
-                      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia
-                      aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor,
-                      sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica,
-                      craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings
-                      occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus
-                      labore sustainable VHS.
-                    </ng-template>
-                  </ngb-panel>
-              </ngb-accordion>
-        </div>
-    </form>
+                    <div class="col-12">
+                      <label for="Gender">Gender: {{ driver?.Gender }}</label>
+                    </div>
+                    <div class="col-12">
+                      <label for="LicensedAge">Licensed Age: {{ driver?.LicensedAge }}</label>
+                    </div>
+                  </div>
+                 </div>
+              </div>
+            </div>
+          </ng-template>
+        </ngb-panel>
+        <ngb-panel id="toggle-4" title="Vehicles">
+          <ng-template ngbPanelContent>
+            <div class="row">
+              <div class="col-4">
+                <div class="row">
+                  <div class="col" *ngFor="let vehicle of policyInquiryDetails?.Vehicles; let isFirst = first">
+                    <div class="col-12"> 
+                      <label for="Year">Year: {{ vehicle?.Year }}</label>
+                    </div>
+                    <div class="col-12">
+                      <label for="Make">Make: {{ vehicle?.Make }}</label>
+                    </div>
+                    <div class="col-12">
+                      <label for="Model">Model: {{ vehicle?.Model }}</label>
+                    </div>
+                    <div class="col-12">
+                      <label for="VehicleOwned">Vehicle Owned: {{ vehicle?.VehicleOwned }}</label>
+                    </div>
+                    <div class="col-12">
+                      <label for="VehicleUsage">Vehicle Usage: {{ vehicle?.VehicleUsage }}</label>
+                    </div>
+                    <div class="col-12">
+                      <label for="AnnualMileage">Annual Mileage: {{ vehicle?.AnnualMileage }}</label>
+                    </div>
+                  </div>
+                 </div>
+              </div>
+            </div>
+          </ng-template>
+        </ngb-panel>
+      </ngb-accordion>
+    </div>
+  </form>
 </div>
