@@ -1,5 +1,5 @@
 {
-  "name": "irqui-policyinquiry-ui",
+  "name": "policy-inquiry-ui",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
