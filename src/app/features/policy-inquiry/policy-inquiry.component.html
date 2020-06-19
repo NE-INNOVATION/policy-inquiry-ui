@@ -1,0 +1,70 @@
+<div class="container">
+    <form>
+        <div class="form-group row padding">
+            <div class="row col-6">
+                <div class="active-cyan-4 mb-4 col-6">
+                    <input class="form-control" type="text" #policyNumberInput placeholder="Policy Number" aria-label="Search" >
+                </div>
+                <div class="col-4">
+                    <button class="btn btn-outline-secondary" type="submit" (click)="onClickSearch(policyNumberInput.value)">Search</button>
+                </div>
+            </div>
+        </div>
+        <div>
+            <ngb-accordion #acc="ngbAccordion">
+                <ngb-panel id="toggle-1" title="Basic Information">
+                  <ng-template ngbPanelContent>
+                     <div class="row">
+                       
+                     </div>
+                  </ng-template>
+                </ngb-panel>
+                <ngb-panel id="toggle-2" title="Coverages">
+                  <ng-template ngbPanelContent>
+                    <div class="row">
+                        <div class="col-12">
+                            Name : tokiu
+                        </div>
+                        <div class="col-12">
+                          Dob: 4/6/1989
+                       </div>
+                        <div class="col-12">
+                          Address : tokiu
+                        </div>
+                    </div>
+                  </ng-template>
+                </ngb-panel>
+                <ngb-panel id="toggle-3" title="Drivers">
+                    <ng-template ngbPanelContent>
+                      <div class="row">
+                          <div class="col-4">
+                              <div class="row">
+                                <div class="col">
+                                    <div class="col-12"> Name : tokiu</div>
+                                    <div class="col-12"> Dob: 4/6/1989</div>
+                                    <div class="col-12"> Address : tokiu</div>
+                                 </div>
+                                 <div class="col">
+                                    <div class="col-12"> Name : tokiu</div>
+                                    <div class="col-12"> Dob: 4/6/1989</div>
+                                    <div class="col-12"> Address : tokiu</div>
+                                 </div>
+                                 </div>
+                              </div>
+                          </div>
+                     </ng-template>
+                  </ngb-panel>
+                  <ngb-panel id="toggle-4" title="Vehicles">
+                    <ng-template ngbPanelContent>
+                      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia
+                      aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor,
+                      sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica,
+                      craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings
+                      occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus
+                      labore sustainable VHS.
+                    </ng-template>
+                  </ngb-panel>
+              </ngb-accordion>
+        </div>
+    </form>
+</div>
