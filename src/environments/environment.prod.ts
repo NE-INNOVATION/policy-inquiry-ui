@@ -1,5 +1,5 @@
 export const environment = {
   production: true,
-  gatewayUrl : 'http://neion-gw-development.apps.openshift.ne-innovation.com/api/policyinquiry/getdetails/'
+  gatewayUrl : 'http://neion-gw-development.apps.openshift.ne-innovation.com/api/policy/policyinquiry/getdetails/'
 };
 
