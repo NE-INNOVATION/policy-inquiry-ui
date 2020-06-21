@@ -1,45 +1,45 @@
 export class PolicyInquiry {
-    PolicyNumber: string;
-    Coverages: Coverages;
-    Customer:Customer;
-    Drivers:Driver[];
-    Vehicles:Vehicle[];
+    policyNumber: string;
+    coverages: coverages;
+    customer:customer;
+    drivers:driver[];
+    vehicles:vehicle[];
 }
 
-export class Coverages {
-    Bi: boolean;
-    Pd: boolean;
-    Med: boolean;
-    Comp: boolean;
-    Col: boolean;
-    Premium: string;
+export class coverages {
+    bi: boolean;
+    pd: boolean;
+    med: boolean;
+    comp: boolean;
+    col: boolean;
+    premium: string;
 }
 
-export class Customer {
-    FirstName: string;
-    LastName: string;
-    Dob: string;
-    StreetAddress: string;
-    Apt: string;
-    Zip: string;
+export class customer {
+    firstName: string;
+    lastName: string;
+    dob: string;
+    streetAddress: string;
+    apt: string;
+    zip: string;
 }
 
 
-export class Driver {
-    Name: string;
-    Gender: string;
-    MaritalStatus: string;
-    LicensedAge: string;
+export class driver {
+    name: string;
+    gender: string;
+    maritalStatus: string;
+    licensedAge: string;
 }
 
-export class Vehicle {
-    Year: string;
-    Make: string;
-    Model: string;
-    VehicleOwned: string;
-    VehicleUsage: string;
+export class vehicle {
+    year: string;
+    make: string;
+    model: string;
+    vehicleOwned: string;
+    vehicleUsage: string;
     daysDriven: string;
     milesDriven: string;
-    VehiclePrimaryUse: string;
-    AnnualMileage: string;
+    mehiclePrimaryUse: string;
+    annualMileage: string;
 }

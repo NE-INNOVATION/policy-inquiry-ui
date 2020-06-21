@@ -16,17 +16,17 @@
         <ng-template ngbPanelContent>
           <div class="row">
             <div class="col-12">
-              <label for="FirstName">First Name: {{ policyInquiryDetails?.Customer?.FirstName }}</label>
+              <label for="FirstName">First Name: {{ policyInquiryDetails?.customer?.firstName }}</label>
             </div>
             <div class="col-12">
-              <label for="LastName">Last Name: {{ policyInquiryDetails?.Customer?.LastName }}</label>
+              <label for="LastName">Last Name: {{ policyInquiryDetails?.customer?.lastName }}</label>
             </div>
             <div class="col-12">
-              <label for="StreetAddress">Street Address: {{ policyInquiryDetails?.Customer?.StreetAddress }}</label>
+              <label for="StreetAddress">Street Address: {{ policyInquiryDetails?.customer?.streetAddress }}</label>
             </div>
             <div class="col-12">
-              <label for="Apt">Apt: {{ policyInquiryDetails?.Customer?.Apt }}</label>
-              <label for="Zip">Zip: {{ policyInquiryDetails?.Customer?.Zip }}</label>
+              <label for="Apt">Apt: {{ policyInquiryDetails?.customer?.apt }}</label>
+              <label for="Zip">Zip: {{ policyInquiryDetails?.customer?.zip }}</label>
             </div>
           </div>
         </ng-template>
@@ -35,22 +35,22 @@
         <ng-template ngbPanelContent>
           <div class="row">
             <div class="col-12">
-              <label for="Bi" *ngIf="policyInquiryDetails?.Coverages?.Bi"></label>
+              <label for="Bi" *ngIf="policyInquiryDetails?.coverages?.bi"></label>
             </div>
             <div class="col-12">
-              <label for="Pd" *ngIf="policyInquiryDetails?.Coverages?.Pd"></label>
+              <label for="Pd" *ngIf="policyInquiryDetails?.coverages?.pd"></label>
             </div>
             <div class="col-12">
-              <label for="Med" *ngIf="policyInquiryDetails?.Coverages?.Med"></label>
+              <label for="Med" *ngIf="policyInquiryDetails?.coverages?.med"></label>
             </div>
             <div class="col-12">
-              <label for="Comp" *ngIf="policyInquiryDetails?.Coverages?.Comp"></label>
+              <label for="Comp" *ngIf="policyInquiryDetails?.coverages?.comp"></label>
             </div>
             <div class="col-12">
-              <label for="Col" *ngIf="policyInquiryDetails?.Coverages?.Col"></label>
+              <label for="Col" *ngIf="policyInquiryDetails?.coverages?.col"></label>
             </div>
             <div class="col-12">
-              <label for="Premium">Premium: {{policyInquiryDetails?.Coverages?.Premium}}</label>
+              <label for="Premium">Premium: {{policyInquiryDetails?.coverages?.premium}}</label>
             </div>
           </div>
         </ng-template>
@@ -60,15 +60,15 @@
           <div class="row">
             <div class="col-4">
               <div class="row">
-                <div class="col" *ngFor="let driver of policyInquiryDetails?.Drivers; let isFirst = first">
+                <div class="col" *ngFor="let driver of policyInquiryDetails?.drivers; let isFirst = first">
                   <div class="col-12"> 
-                    <label for="Apt">Name: {{ driver?.Name }}</label>
+                    <label for="Apt">Name: {{ driver?.name }}</label>
                   </div>
                   <div class="col-12">
-                    <label for="Gender">Gender: {{ driver?.Gender }}</label>
+                    <label for="Gender">Gender: {{ driver?.gender }}</label>
                   </div>
                   <div class="col-12">
-                    <label for="LicensedAge">Licensed Age: {{ driver?.LicensedAge }}</label>
+                    <label for="LicensedAge">Licensed Age: {{ driver?.licensedAge }}</label>
                   </div>
                 </div>
                </div>
@@ -81,24 +81,24 @@
           <div class="row">
             <div class="col-4">
               <div class="row">
-                <div class="col" *ngFor="let vehicle of policyInquiryDetails?.Vehicles; let isFirst = first">
+                <div class="col" *ngFor="let vehicle of policyInquiryDetails?.vehicles; let isFirst = first">
                   <div class="col-12"> 
-                    <label for="Year">Year: {{ vehicle?.Year }}</label>
+                    <label for="Year">Year: {{ vehicle?.year }}</label>
                   </div>
                   <div class="col-12">
-                    <label for="Make">Make: {{ vehicle?.Make }}</label>
+                    <label for="Make">Make: {{ vehicle?.make }}</label>
                   </div>
                   <div class="col-12">
-                    <label for="Model">Model: {{ vehicle?.Model }}</label>
+                    <label for="Model">Model: {{ vehicle?.model }}</label>
                   </div>
                   <div class="col-12">
-                    <label for="VehicleOwned">Vehicle Owned: {{ vehicle?.VehicleOwned }}</label>
+                    <label for="VehicleOwned">Vehicle Owned: {{ vehicle?.vehicleOwned }}</label>
                   </div>
                   <div class="col-12">
-                    <label for="VehicleUsage">Vehicle Usage: {{ vehicle?.VehicleUsage }}</label>
+                    <label for="VehicleUsage">Vehicle Usage: {{ vehicle?.vehicleUsage }}</label>
                   </div>
                   <div class="col-12">
-                    <label for="AnnualMileage">Annual Mileage: {{ vehicle?.AnnualMileage }}</label>
+                    <label for="AnnualMileage">Annual Mileage: {{ vehicle?.annualMileage }}</label>
                   </div>
                 </div>
                </div>
