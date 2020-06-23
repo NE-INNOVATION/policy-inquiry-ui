@@ -35,22 +35,22 @@
         <ng-template ngbPanelContent>
           <div class="row">
             <div class="col-12">
-              <label for="Bi" *ngIf="policyInquiryDetails?.coverages?.bi"></label>
+              <label for="Bi">Bodily Injury: {{policyInquiryDetails?.coverages[0].bi}}</label>
             </div>
             <div class="col-12">
-              <label for="Pd" *ngIf="policyInquiryDetails?.coverages?.pd"></label>
+              <label for="Pd">Property Damage : {{policyInquiryDetails?.coverages[0].pd}}</label>
             </div>
             <div class="col-12">
-              <label for="Med" *ngIf="policyInquiryDetails?.coverages?.med"></label>
+              <label for="Med">Medical Payment : {{policyInquiryDetails?.coverages[0].med}}</label>
             </div>
             <div class="col-12">
-              <label for="Comp" *ngIf="policyInquiryDetails?.coverages?.comp"></label>
+              <label for="Comp">Comprehensive : {{policyInquiryDetails?.coverages[0].comp}} </label>
             </div>
             <div class="col-12">
-              <label for="Col" *ngIf="policyInquiryDetails?.coverages?.col"></label>
+              <label for="Col">Collision : {{policyInquiryDetails?.coverages[0].col}}</label>
             </div>
             <div class="col-12">
-              <label for="Premium">Premium: {{policyInquiryDetails?.coverages?.premium}}</label>
+              <label for="Premium">Premium: {{policyInquiryDetails?.coverages[0].premium}}</label>
             </div>
           </div>
         </ng-template>
