@@ -16,17 +16,17 @@
         <ng-template ngbPanelContent>
           <div class="row">
             <div class="col-12">
-              <label for="FirstName">First Name: {{ policyInquiryDetails?.customer?.firstName }}</label>
+              <label for="FirstName">First Name: <b>{{ policyInquiryDetails?.customer?.firstName }}</b></label>
             </div>
             <div class="col-12">
-              <label for="LastName">Last Name: {{ policyInquiryDetails?.customer?.lastName }}</label>
+              <label for="LastName">Last Name: <b>{{ policyInquiryDetails?.customer?.lastName }}</b></label>
             </div>
             <div class="col-12">
-              <label for="StreetAddress">Street Address: {{ policyInquiryDetails?.customer?.streetAddress }}</label>
+              <label for="StreetAddress">Street Address: <b>{{ policyInquiryDetails?.customer?.stAddress }}</b></label>
             </div>
             <div class="col-12">
-              <label for="Apt">Apt: {{ policyInquiryDetails?.customer?.apt }}</label>
-              <label for="Zip">Zip: {{ policyInquiryDetails?.customer?.zip }}</label>
+              <label for="Apt">Apt: <b>{{ policyInquiryDetails?.customer?.apt }}</b></label>&nbsp;&nbsp;
+              <label for="Zip">Zip: <b>{{ policyInquiryDetails?.customer?.zip }}</b></label>
             </div>
           </div>
         </ng-template>
@@ -35,22 +35,22 @@
         <ng-template ngbPanelContent>
           <div class="row">
             <div class="col-12">
-              <label for="Bi">Bodily Injury: {{policyInquiryDetails?.coverages[0].bi}}</label>
+              <label for="Bi">Bodily Injury: <b>{{policyInquiryDetails?.coverages[0].bi}}</b></label>
             </div>
             <div class="col-12">
-              <label for="Pd">Property Damage : {{policyInquiryDetails?.coverages[0].pd}}</label>
+              <label for="Pd">Property Damage : <b>{{policyInquiryDetails?.coverages[0].pd}}</b></label>
             </div>
             <div class="col-12">
-              <label for="Med">Medical Payment : {{policyInquiryDetails?.coverages[0].med}}</label>
+              <label for="Med">Medical Payment : <b>{{policyInquiryDetails?.coverages[0].med}}</b></label>
             </div>
             <div class="col-12">
-              <label for="Comp">Comprehensive : {{policyInquiryDetails?.coverages[0].comp}} </label>
+              <label for="Comp">Comprehensive : <b>{{policyInquiryDetails?.coverages[0].comp}}</b></label>
             </div>
             <div class="col-12">
-              <label for="Col">Collision : {{policyInquiryDetails?.coverages[0].col}}</label>
+              <label for="Col">Collision : <b>{{policyInquiryDetails?.coverages[0].col}}</b></label>
             </div>
             <div class="col-12">
-              <label for="Premium">Premium: {{policyInquiryDetails?.coverages[0].premium}}</label>
+              <label for="Premium">Premium: <b>${{policyInquiryDetails?.coverages[0].premium}}</b></label>
             </div>
           </div>
         </ng-template>
@@ -62,13 +62,10 @@
               <div class="row">
                 <div class="col" *ngFor="let driver of policyInquiryDetails?.drivers; let isFirst = first">
                   <div class="col-12"> 
-                    <label for="Apt">Name: {{ driver?.name }}</label>
+                    <label for="Apt">Name: <b>{{ driver?.name }}</b></label>
                   </div>
                   <div class="col-12">
-                    <label for="Gender">Gender: {{ driver?.gender }}</label>
-                  </div>
-                  <div class="col-12">
-                    <label for="LicensedAge">Licensed Age: {{ driver?.licensedAge }}</label>
+                    <label for="Gender">Gender: <b>{{ driver?.gender }}</b></label>
                   </div>
                 </div>
                </div>
@@ -83,22 +80,22 @@
               <div class="row">
                 <div class="col" *ngFor="let vehicle of policyInquiryDetails?.vehicles; let isFirst = first">
                   <div class="col-12"> 
-                    <label for="Year">Year: {{ vehicle?.year }}</label>
+                    <label for="Year">Year: <b>{{ vehicle?.year }}</b></label>
                   </div>
                   <div class="col-12">
-                    <label for="Make">Make: {{ vehicle?.make }}</label>
+                    <label for="Make">Make: <b>{{ vehicle?.make }}</b></label>
                   </div>
                   <div class="col-12">
-                    <label for="Model">Model: {{ vehicle?.model }}</label>
+                    <label for="Model">Model: <b>{{ vehicle?.model }}</b></label>
                   </div>
                   <div class="col-12">
-                    <label for="VehicleOwned">Vehicle Owned: {{ vehicle?.vehicleOwned }}</label>
+                    <label for="VehicleOwned">Vehicle Owned: <b>{{ vehicle?.vehicleOwned }}</b></label>
                   </div>
                   <div class="col-12">
-                    <label for="VehicleUsage">Vehicle Usage: {{ vehicle?.vehicleUsage }}</label>
+                    <label for="VehicleUsage">Vehicle Usage: <b>{{ vehicle?.vehicleUsage }}</b></label>
                   </div>
                   <div class="col-12">
-                    <label for="AnnualMileage">Annual Mileage: {{ vehicle?.annualMileage }}</label>
+                    <label for="AnnualMileage">Annual Mileage: <b>{{ vehicle?.annualMileage }}</b></label>
                   </div>
                 </div>
                </div>

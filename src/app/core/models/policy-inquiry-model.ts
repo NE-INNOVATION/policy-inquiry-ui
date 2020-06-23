@@ -19,7 +19,7 @@ export class customer {
     firstName: string;
     lastName: string;
     dob: string;
-    streetAddress: string;
+    stAddress: string;
     apt: string;
     zip: string;
 }
