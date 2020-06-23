@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  gatewayUrl : 'http://policy-inquiry-api-development.apps.azureopenshift.neinnovation-ocp.com/api/policy/policyinquiry/getdetails/'
+  gatewayUrl : 'http://istio-ingressgateway-istio-system.apps.azureopenshift.neinnovation-ocp.com/api/policy/policyinquiry/getdetails/'
 };
 
 /*
