@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  gatewayUrl : 'http://policy-inquiry-api-development.apps.azureneocp.neinnovation-ocp.com/api/policy/PolicyInquiry/getdetails/'
+  gatewayUrl : 'http://policy-inquiry-api-ui-development.apps.azureneocp.neinnovation-ocp.com/api/policy/PolicyInquiry/getdetails/'
 };
 
 /*
