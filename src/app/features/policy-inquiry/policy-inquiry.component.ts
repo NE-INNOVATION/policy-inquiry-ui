@@ -85,6 +85,9 @@ export class PolicyInquiryComponent implements OnInit,AfterViewInit {
              alert("No data found");
              return;
            }
+           else{
+            this.policyInquiryByName = [];
+           }
 
            policyInquiry.map(item => {
             var policyInquiryDt:PolicyInquiryDt = {
