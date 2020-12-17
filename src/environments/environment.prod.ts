@@ -1,5 +1,5 @@
 export const environment = {
   production: true,
-  gatewayUrl : 'http://istio-ingressgateway-istio-system.apps.azureopenshift.neinnovation-ocp.com/api/policy/policyinquiry/getdetails/'
+  gatewayUrl : 'http://policy-inquiry-api-ui-development.apps.azureneocp.neinnovation-ocp.com/api/policy/PolicyInquiry/getdetails/'
 };
 
