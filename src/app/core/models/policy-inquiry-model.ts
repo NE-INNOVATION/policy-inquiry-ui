@@ -7,11 +7,11 @@ export class PolicyInquiry {
 }
 
 export class coverages {
-    bi: boolean;
-    pd: boolean;
-    med: boolean;
-    comp: boolean;
-    col: boolean;
+    bi: string;
+    pd: string;
+    med: string;
+    comp: string;
+    col: string;
     premium: string;
 }
 
@@ -30,6 +30,7 @@ export class driver {
     gender: string;
     maritalStatus: string;
     licensedAge: string;
+    licenseNum: string;
 }
 
 export class vehicle {
@@ -43,3 +44,25 @@ export class vehicle {
     mehiclePrimaryUse: string;
     annualMileage: string;
 }
+
+export class PolicyInquiryDt {
+    policyNumber: string;
+    firstName: string;
+    dob: string;
+    Covbi: string;
+    covcomp: string;
+    driverName: string;
+    licenseNumber: string;
+    vehicleYear: string;
+  
+    constructor() {
+      this.policyNumber = '';
+      this.firstName = '';
+      this.dob = '';
+      this.Covbi = '';
+      this.covcomp = '';
+      this.driverName = '';
+      this.licenseNumber = '';
+      this.vehicleYear = '';
+    }
+  }
