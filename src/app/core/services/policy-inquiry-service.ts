@@ -22,7 +22,7 @@ export class PolicyInquiryService {
       }
 
       public getPolicyInquiryDataByName(firstName: string,lastName: string) : Observable<PolicyInquiry[]> {
-        return this.http.post<PolicyInquiry[]>(environment.gatewayUrl + "api/policy/policyinquiry/GetDetailsWithName",{"firstName" : firstName,"lastName":lastName})
+        return this.http.post<PolicyInquiry[]>(environment.gatewayUrl + "api/policy/policyinquiry",{"firstName" : firstName,"lastName":lastName})
         .pipe(
             retry(1),
             catchError(this.handleError)
