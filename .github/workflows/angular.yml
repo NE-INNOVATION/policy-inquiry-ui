@@ -60,7 +60,7 @@ jobs:
         # Oc command to be executed
         cmd: |
           'version'
-          'project ui-development'
+          'project inquiry'
           'tag --source=docker quay.io/neinnovationorg/policy-inquiry-ui:${{ steps.extract_branch.outputs.branch }} ui-development/policy-inquiry-ui:${{ steps.extract_branch.outputs.branch }}'
     - name: Scan Image
       uses: Azure/container-scan@v0
